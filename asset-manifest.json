@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Fyllapp/static/css/main.33983b62.chunk.css",
-    "main.js": "/Fyllapp/static/js/main.388b529a.chunk.js",
-    "main.js.map": "/Fyllapp/static/js/main.388b529a.chunk.js.map",
+    "main.css": "/Fyllapp/static/css/main.069f1380.chunk.css",
+    "main.js": "/Fyllapp/static/js/main.bf364617.chunk.js",
+    "main.js.map": "/Fyllapp/static/js/main.bf364617.chunk.js.map",
     "runtime-main.js": "/Fyllapp/static/js/runtime-main.20b5c29a.js",
     "runtime-main.js.map": "/Fyllapp/static/js/runtime-main.20b5c29a.js.map",
     "static/js/2.d510ff1d.chunk.js": "/Fyllapp/static/js/2.d510ff1d.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.0045bfc2.chunk.js": "/Fyllapp/static/js/3.0045bfc2.chunk.js",
     "static/js/3.0045bfc2.chunk.js.map": "/Fyllapp/static/js/3.0045bfc2.chunk.js.map",
     "index.html": "/Fyllapp/index.html",
-    "static/css/main.33983b62.chunk.css.map": "/Fyllapp/static/css/main.33983b62.chunk.css.map",
+    "static/css/main.069f1380.chunk.css.map": "/Fyllapp/static/css/main.069f1380.chunk.css.map",
     "static/js/2.d510ff1d.chunk.js.LICENSE.txt": "/Fyllapp/static/js/2.d510ff1d.chunk.js.LICENSE.txt",
     "static/media/logo.6ce24c58.svg": "/Fyllapp/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.20b5c29a.js",
     "static/js/2.d510ff1d.chunk.js",
-    "static/css/main.33983b62.chunk.css",
-    "static/js/main.388b529a.chunk.js"
+    "static/css/main.069f1380.chunk.css",
+    "static/js/main.bf364617.chunk.js"
   ]
 }
