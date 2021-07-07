@@ -7,6 +7,7 @@
     background: rgba(1,1,1,0.15);
     color: rgba(254,254,254,0.9);
     border-radius: 10rem;
+    outline: none;
 }
 .nextButton:hover{
     transition: 200ms;
@@ -23,10 +24,11 @@
     border-radius: 100rem;
     border: none;
     margin: 2rem;
-    padding: .6rem 1.5rem;
+    padding: .2rem 1rem;
     font-size: 3rem;
     background-color: rgba(0, 0, 0, 0.3);
     color: white;
+    outline: none;
 }
 
 .addName:hover{
@@ -45,4 +47,6 @@
     background: rgba(255, 255, 255, 0.7);
     padding: 0.5rem 1rem; 
     margin: 1rem;
+    font-size: 1.5rem;
+    outline: none;
 }

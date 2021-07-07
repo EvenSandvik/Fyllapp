@@ -67,7 +67,7 @@ function Game(props) {
         ["Spørsmål", "Hvem er den største skuffelsen?"],
         ["Spørsmål", "Hvem sender penger til en nigeriansk prins?"],
         ["Spørsmål", "Hvem er mest fotogen?"],
-        ["Spørsmål", "Hvem har størst sko? ;)"],
+        ["Spørsmål", "Hvem har størst sko?😉"],
         ["Spørsmål", "Hvem runker mest?"],
         ["Spørsmål", "Hvem har de mest spennende puppene?"],
         ["Spørsmål", "Hvem er mest fuckboy?"],
@@ -139,17 +139,17 @@ function Game(props) {
         ["Nøtt eller sannhet", "x må gi fra seg telefonen i 1 minutt, eller si hva det pinligste de har på mobilen er."],
         ["Nøtt eller sannhet", "x må la noen gi deg en wedgie, eller oppføre deg som en kylling i 5 runder."],
         ["Nøtt eller sannhet", "x må ringe en venn og late som om det er bursdagen hans(synge happy birthday), eller stupe drikken sin."],
-        ["Kongen befaler", "Alle jenter tar en slurk"],
-        ["Kongen befaler", "Alle gutter tar en slurk"],
-        ["Kongen befaler", "x kan ikke lenger  drikke med høyrehånden. Straff: en slurk"],
-        ["Kongen befaler", "x må legge ut en mystory"],
-        ["Kongen befaler", "x må si en kjendis lookalike for alle i rommet."],
-        ["Kongen befaler", "x må si 2 positive og en negativ ting om hver spiller."],
-        ["Kongen befaler", "x må demonstrere hvordan han styler håret sitt."],
-        ["Kongen befaler", "x kan bare bjeffe som en hund i 5 runder."],
-        ["Kongen befaler", "x må snakke engelsk(i en britisk akksang), i 4 runder."],
-        ["Kongen befaler", "x må gjøre en imitasjon av en annen spiller, helt til noen gjetter hvem det er."],
-        ["Kongen befaler", "x må gi fra seg sine beste sjekketriks/replikker, eller løpe 2 runder rundt huset."],
+        ["👑Kongen befaler👑", "Alle jenter tar en slurk"],
+        ["👑Kongen befaler👑", "Alle gutter tar en slurk"],
+        ["👑Kongen befaler👑", "x kan ikke lenger  drikke med høyrehånden. Straff: en slurk"],
+        ["👑Kongen befaler👑", "x må legge ut en mystory"],
+        ["👑Kongen befaler👑", "x må si en kjendis lookalike for alle i rommet."],
+        ["👑Kongen befaler👑", "x må si 2 positive og en negativ ting om hver spiller."],
+        ["👑Kongen befaler👑", "x må demonstrere hvordan han styler håret sitt."],
+        ["👑Kongen befaler👑", "x kan bare bjeffe som en hund i 5 runder."],
+        ["👑Kongen befaler👑", "x må snakke engelsk(i en britisk akksang), i 4 runder."],
+        ["👑Kongen befaler👑", "x må gjøre en imitasjon av en annen spiller, helt til noen gjetter hvem det er."],
+        ["👑Kongen befaler👑", "x må gi fra seg sine beste sjekketriks/replikker, eller løpe 2 runder rundt huset."],
     ]);
 
     const colors = ["#85CCAA", "#DAA9F1", "#D9A568", "#D96868", "#A9E4F1", "#CC85AB", "#C9D968", "#6873D9", "#F1A9A9", "#8D95A1", "#BABE9F", "#9CE144"];
@@ -158,7 +158,8 @@ function Game(props) {
     const shuffleArray = (array) => {
         let i = array.length - 1;
         for (; i > 0; i--) {
-            if(i%10==0){
+            //Just add SKÅL the first shuffle
+            if(questionIdx== 0 && i%10==0){
                 array[i] = ["SKÅL!", "Alle drikk."]
             }
             else{
@@ -213,16 +214,14 @@ function Game(props) {
 
     return <div style={{ backgroundColor: color, paddingBottom: "40rem" }}>
         {names.length == 0 ? <div>
-            <p style={{ fontSize: "2rem", paddingTop: "10rem"}}>Skriv inn navn</p>
+            <p style={{ fontSize: "2rem", paddingTop: "3rem"}}>Skriv inn navn</p>
             {inputs}
             <button className="addName" onClick={() => setNPlayers(nPlayers + 1)}>+</button><br></br>
             <button disabled={false} className="addName" onClick={startGame}>Start Spill</button>
         </div> :
             <div>
                 <h1 style={{ fontSize: "2.4rem", paddingTop: "10rem" }}>{questionList[questionIdx][0]}</h1>
-                <p style={{ fontSize: "1.2rem", padding: "1rem"
-                
-                 }}>{questionList[questionIdx][1]}</p>
+                <p style={{ fontSize: "1.2rem", padding: "1rem"}}>{questionList[questionIdx][1]}</p>
 
                 <button onClick={nextGame} className="nextButton">
                     Neste
