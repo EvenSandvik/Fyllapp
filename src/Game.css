@@ -1,0 +1,48 @@
+.nextButton{
+    border: none;
+    font-size: 2rem;
+    border-right-width: 10rem;
+    margin: 4rem;
+    padding: 1rem 2rem;
+    background: rgba(1,1,1,0.15);
+    color: rgba(254,254,254,0.9);
+    border-radius: 10rem;
+}
+.nextButton:hover{
+    transition: 200ms;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.nextButton:active{
+    background: rgba(0, 0, 0, 0.9);
+    color: aliceblue;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.addName{
+    border-radius: 100rem;
+    border: none;
+    margin: 2rem;
+    padding: .6rem 1.5rem;
+    font-size: 3rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.addName:hover{
+    transition: 200ms;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.addName:active{
+    background: rgba(0, 0, 0, 0.9);
+    color: aliceblue;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.textfield{
+    border: none;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 0.5rem 1rem; 
+    margin: 1rem;
+}
