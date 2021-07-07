@@ -4,7 +4,7 @@ import './Game.css';
 function Game(props) {
 
     const [questionIdx, setQuestionIdx] = useState(0);
-    const [color, setColor] = useState("#4BC0C8");
+    const [color, setColor] = useState("linear-gradient(to top, #ef32d9, #89fffd)");
     const [names, setNames] = useState([]);
     const [nPlayers, setNPlayers] = useState(3);
     const [playerMessage, setPlayerMessage] = useState(false);
@@ -187,6 +187,12 @@ function Game(props) {
 
     const startGame = () => {
         if(document.getElementById("player2") && document.getElementById("player2").value != null && document.getElementById("player2").value != ""){
+            let newColor = color;
+        while (newColor == color) {
+            newColor = colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        setColor(newColor);
             for (let i = 0; i < nPlayers; i++) {
                 setNames(names[i] = document.getElementById("player" + i).value);
             }
@@ -195,6 +201,7 @@ function Game(props) {
         else{
             setPlayerMessage(true);
         }
+        
     }
 
     const nextGame = () => {
@@ -218,13 +225,14 @@ function Game(props) {
         }
     }
 
-    return <div style={{ backgroundColor: color, paddingBottom: "40rem" }}>
+    return <div style={{ background: color, paddingBottom: "40rem" }}>
         {names.length == 0 ? <div>
-            <p style={{ fontSize: "2rem", paddingTop: "3rem"}}>Skriv inn navn</p>
+            <div style={{paddingTop: "2rem", borderBottom: "1px solid rgba(255, 255, 255, .4)"}}><p>Fyllapp</p></div>
+            <p style={{ fontSize: "2.3rem", marginBottom: "0.3rem", paddingTop: ".6rem"}}>Skriv inn navn</p>
             {inputs}
             <button className="addName" onClick={() => setNPlayers(nPlayers + 1)}>+</button><br></br>
             {playerMessage && <p style={{fontSize: "1.2rem", margin: "0"}}>Skriv inn spillernes navn</p>}
-            <button disabled={false} className="addName" onClick={startGame}>Start Spill</button>
+            <button disabled={false} className="startGame" onClick={startGame}>Start Spill</button>
         </div> :
             <div>
                 <h1 style={{ fontSize: "2.4rem", paddingTop: "10rem" }}>{questionList[questionIdx][0]}</h1>

@@ -26,20 +26,42 @@
     margin: 2rem;
     padding: .2rem 1rem;
     font-size: 3rem;
-    background-color: rgba(0, 0, 0, 0.3);
-    color: white;
+    background-color: rgba(255, 255, 255, 0.6);
     outline: none;
+    color: rgb(255, 255, 255);
 }
 
 .addName:hover{
     transition: 200ms;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.3);
 }
 
 .addName:active{
     background: rgba(0, 0, 0, 0.9);
     color: aliceblue;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.startGame{
+    border-radius: 100rem;
+    border: none;
+    margin: 2rem;
+    padding: .5rem 2rem;
+    font-size: 3rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    outline: none;
+    color: rgb(254, 249, 255, 1);
+}
+
+.startGame:hover{
+    transition: 200ms;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.startGame:active{
+    background: rgba(0, 0, 0, 0.9);
+    color: aliceblue;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .textfield{
@@ -49,4 +71,5 @@
     margin: 1rem;
     font-size: 1.2rem;
     outline: none;
+    border-radius: .5rem;
 }
