@@ -7,6 +7,7 @@ function Game(props) {
     const [color, setColor] = useState("#4BC0C8");
     const [names, setNames] = useState([]);
     const [nPlayers, setNPlayers] = useState(3);
+    const [playerMessage, setPlayerMessage] = useState(false);
 
 
     const [questionList, setQuestionList] = useState([
@@ -185,10 +186,15 @@ function Game(props) {
     }
 
     const startGame = () => {
-        for (let i = 0; i < nPlayers; i++) {
-            setNames(names[i] = document.getElementById("player"+i).value)
+        if(document.getElementById("player2") && document.getElementById("player2").value != null && document.getElementById("player2").value != ""){
+            for (let i = 0; i < nPlayers; i++) {
+                setNames(names[i] = document.getElementById("player" + i).value);
+            }
+            setQuestionList(shuffleArray(questionList));
         }
-        setQuestionList(shuffleArray(questionList));
+        else{
+            setPlayerMessage(true);
+        }
     }
 
     const nextGame = () => {
@@ -217,6 +223,7 @@ function Game(props) {
             <p style={{ fontSize: "2rem", paddingTop: "3rem"}}>Skriv inn navn</p>
             {inputs}
             <button className="addName" onClick={() => setNPlayers(nPlayers + 1)}>+</button><br></br>
+            {playerMessage && <p style={{fontSize: "1.2rem", margin: "0"}}>Skriv inn spillernes navn</p>}
             <button disabled={false} className="addName" onClick={startGame}>Start Spill</button>
         </div> :
             <div>
